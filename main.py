@@ -1,13 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from telegram.ext import *
-from telegram import InputMediaPhoto
 from dotenv import load_dotenv
 
 import os
 
 async def start(update, context):
-    # /plot sin(x) 0 2 10
+
     reply_string = '''
 To  use the bot you need to write the command followed ny the function, than the lower and upper bound and lastly the number of points to evaluate f(x) in that interval:
 e.g.
@@ -54,7 +53,6 @@ def main():
 
     load_dotenv()
     TELEGRAM_TOKEN = os.getenv("TOKEN")
-
     application = Application.builder().token(TELEGRAM_TOKEN).build()
 
     # Commands
